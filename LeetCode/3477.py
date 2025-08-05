@@ -6,11 +6,9 @@ class Solution:
         n = len(fruits)
         cnt = 0
         for i in range(n):
-            l = -1
-            for j in range(n -1, -1, -1):
+            for j in range(n):
                 if baskets[j] and fruits[i] <= baskets[j]:
-                    l = j
-            if l != -1:
-                cnt += 1
-                baskets[l] = 0
+                    cnt += 1
+                    baskets[j] = 0
+                    break
         return n - cnt
