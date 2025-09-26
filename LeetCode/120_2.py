@@ -10,3 +10,4 @@ class Solution:
                 dp[i] = min(dp[i], dp[i + 1]) + n
         return dp[0]
 
+    
