@@ -13,7 +13,8 @@ class Solution:
                 if k != v:
                     return False
             return True
-        for i in range(n + 1, n * 7 + 100):
-            if(good(i)):
-                return i
+        while True:
+            n += 1
+            if good(n):
+                return n
         return -1
